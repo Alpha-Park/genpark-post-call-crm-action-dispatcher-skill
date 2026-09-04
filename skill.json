@@ -1,0 +1,42 @@
+{
+  "name": "genpark-post-call-crm-action-dispatcher-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Post-call structured JSON transcript summarizer and CRM webhook dispatcher creating instant leads and calendar invites.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "voice-agent",
+  "tags": [
+    "bland-ai",
+    "synthflow",
+    "crm-dispatcher",
+    "call-summary",
+    "lead-generation"
+  ],
+  "inputs": {
+    "call_id": {
+      "type": "string"
+    },
+    "transcript": {
+      "type": "string"
+    },
+    "call_duration_seconds": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "dispatch_id": {
+      "type": "string"
+    },
+    "lead_score": {
+      "type": "integer"
+    },
+    "crm_record_created": {
+      "type": "boolean"
+    },
+    "crm_webhook_audit_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
